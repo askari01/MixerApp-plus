@@ -1,26 +1,151 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MixerApp_Plus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPo-HJ-ppW">
+                                <rect key="frame" x="20" y="120" width="374" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.28627450980000002" green="0.34901960780000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Enter url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zxE-Rj-EHX">
+                                <rect key="frame" x="117" y="167" width="231" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="sQS-Li-H20"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuW-MK-5kC">
+                                <rect key="frame" x="356" y="171" width="38" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="8dn-1U-Vo2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goActionCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKt-md-cxn"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qvd-e1-i5O">
+                                <rect key="frame" x="20" y="167" width="89" height="52"/>
+                                <color key="tintColor" red="0.30980392159999998" green="0.40000000000000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="SZF-kv-oWU"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.53333333329999999" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EuW-MK-5kC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4WC-nc-MVs"/>
+                            <constraint firstItem="zxE-Rj-EHX" firstAttribute="top" secondItem="DPo-HJ-ppW" secondAttribute="bottom" constant="8" id="4Yh-lI-qva"/>
+                            <constraint firstItem="Qvd-e1-i5O" firstAttribute="top" secondItem="EuW-MK-5kC" secondAttribute="top" constant="-4" id="5YZ-GC-FBe"/>
+                            <constraint firstItem="Qvd-e1-i5O" firstAttribute="bottom" secondItem="zxE-Rj-EHX" secondAttribute="bottom" id="8MP-kl-uJx"/>
+                            <constraint firstItem="zxE-Rj-EHX" firstAttribute="leading" secondItem="Qvd-e1-i5O" secondAttribute="trailing" constant="8" id="Ddk-qj-D9L"/>
+                            <constraint firstItem="Qvd-e1-i5O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="De6-ut-F0M"/>
+                            <constraint firstItem="EuW-MK-5kC" firstAttribute="leading" secondItem="zxE-Rj-EHX" secondAttribute="trailing" constant="8" id="Eb1-Q3-bM4"/>
+                            <constraint firstItem="DPo-HJ-ppW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="W4Y-Lz-YRS"/>
+                            <constraint firstItem="zxE-Rj-EHX" firstAttribute="bottom" secondItem="EuW-MK-5kC" secondAttribute="bottom" id="WJB-Pj-MXQ"/>
+                            <constraint firstItem="DPo-HJ-ppW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="heN-TC-vxA"/>
+                            <constraint firstItem="DPo-HJ-ppW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lns-8m-AvT"/>
+                            <constraint firstItem="EuW-MK-5kC" firstAttribute="top" secondItem="DPo-HJ-ppW" secondAttribute="bottom" constant="12" id="wF8-r5-cL3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="goAction" destination="EuW-MK-5kC" id="5Rg-gT-A7V"/>
+                        <outlet property="secure" destination="Qvd-e1-i5O" id="o1j-m1-XlA"/>
+                        <outlet property="url" destination="zxE-Rj-EHX" id="fMk-HT-eGr"/>
+                        <segue destination="ZlK-Ol-mxr" kind="show" identifier="go" id="ehW-ps-pjm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="136.95652173913044"/>
+        </scene>
+        <!--WebVC-->
+        <scene sceneID="Wj2-Xp-MT6">
+            <objects>
+                <viewController storyboardIdentifier="web" id="ZlK-Ol-mxr" customClass="WebVC" customModule="MixerApp_Plus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VaM-U1-8jH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Er9-qN-WCW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lLR-5Y-A5I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gog-7T-rw1">
+                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPN-ye-7LL">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="5rc-8v-oA6">
+                                        <connections>
+                                            <action selector="backActionCall:" destination="ZlK-Ol-mxr" id="X1S-Hb-iJr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Forward" id="RZj-pb-xlh">
+                                        <connections>
+                                            <action selector="forwardActionCall:" destination="ZlK-Ol-mxr" id="fY6-Jd-JuK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Refresh" id="wJK-Zi-rt9">
+                                        <connections>
+                                            <action selector="refreshActionCall:" destination="ZlK-Ol-mxr" id="dGM-jK-0cn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Stop" id="5bD-SB-Ufz"/>
+                                    <barButtonItem title="Settings" id="aRe-vr-6mv">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="3gD-pz-a87"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gog-7T-rw1" firstAttribute="trailing" secondItem="SPN-ye-7LL" secondAttribute="trailing" id="4BG-l9-E0f"/>
+                            <constraint firstItem="gog-7T-rw1" firstAttribute="leading" secondItem="lLR-5Y-A5I" secondAttribute="leading" id="8Ui-zU-7Rf"/>
+                            <constraint firstItem="gog-7T-rw1" firstAttribute="leading" secondItem="SPN-ye-7LL" secondAttribute="leading" id="Lsu-FS-SO2"/>
+                            <constraint firstAttribute="trailing" secondItem="gog-7T-rw1" secondAttribute="trailing" id="TLv-Ku-dCi"/>
+                            <constraint firstItem="gog-7T-rw1" firstAttribute="top" secondItem="VaM-U1-8jH" secondAttribute="bottom" id="hCM-s2-eU9"/>
+                            <constraint firstItem="SPN-ye-7LL" firstAttribute="top" secondItem="gog-7T-rw1" secondAttribute="bottom" id="iRh-gh-sBU"/>
+                            <constraint firstItem="SPN-ye-7LL" firstAttribute="bottom" secondItem="Er9-qN-WCW" secondAttribute="top" id="zYC-O5-bcG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="gog-7T-rw1" id="NN0-3c-IPQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bf5-3G-Qh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168" y="137"/>
         </scene>
     </scenes>
 </document>

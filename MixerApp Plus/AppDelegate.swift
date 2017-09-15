@@ -12,10 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let pref = UserDefaults()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let url = pref.value(forKey: "url") {
+            if String(describing: url) != "" {
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "web") as! WebVC
+                self.window?.rootViewController = newViewController
+                self.window?.makeKeyAndVisible()
+            }
+        }
+        
         return true
     }
 
