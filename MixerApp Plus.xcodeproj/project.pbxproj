@@ -270,9 +270,10 @@
 				DEVELOPMENT_TEAM = 49MZGARGS9;
 				INFOPLIST_FILE = "MixerApp Plus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.askari.MixerApp-Plus";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ILCSDCAC.MixerApp-Plus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -283,9 +284,10 @@
 				DEVELOPMENT_TEAM = 49MZGARGS9;
 				INFOPLIST_FILE = "MixerApp Plus/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.askari.MixerApp-Plus";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ILCSDCAC.MixerApp-Plus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -308,6 +310,7 @@
 				364A91461F6BB5F6009C8B52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
